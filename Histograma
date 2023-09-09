@@ -1,0 +1,38 @@
+package javaapplication2;
+import java.util.Scanner;
+
+public class PositivosNegativos {
+
+  public static void main(String[] args) {
+    
+    Scanner scanner = new Scanner(System.in);
+    int positivos = 0;
+    int negativos = 0;
+    int valor;
+    
+    do {
+      System.out.print("Ingrese un número entero (0 para terminar): ");
+      valor = scanner.nextInt();
+      
+      if(valor > 0) {
+        positivos++;  
+      }
+      else if(valor < 0) {
+        negativos++;
+      }
+      
+    } while(valor != 0);
+    
+    System.out.println("Positivos: ");
+    for(int i=0; i<positivos; i++) {
+      System.out.print("*");
+    }
+    
+    System.out.println("\nNegativos: ");
+    for(int i=0; i<negativos; i++) {
+      System.out.print("*");
+    }
+
+  }
+
+}
