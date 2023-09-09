@@ -1,0 +1,27 @@
+package javaapplication2;
+import java.util.Scanner;
+public class JavaApplication2 {
+    public static void main(String[] args) {
+    
+    Scanner sc = new Scanner(System.in);
+    int totalMinutos = 0;
+    int tiempoViaje;
+    
+    do {
+      System.out.print("Ingrese el tiempo de viaje (en minutos) del tramo. Ingrese 0 para finalizar: ");
+      tiempoViaje = sc.nextInt();
+      
+      if(tiempoViaje > 0) {
+        totalMinutos += tiempoViaje;//totalminutos= totalminutos+tiempoviaje
+      }
+      
+    } while(tiempoViaje != 0);
+    
+    int horas = totalMinutos / 60;
+    int minutos = totalMinutos % 60;
+    
+    System.out.println("Tiempo total de viaje: " + horas + " horas : " + minutos + " minutos");
+
+  }
+
+}
